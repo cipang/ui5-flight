@@ -1,14 +1,25 @@
-<mvc:View
-    controllerName="flight.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="flight.controller.View1" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					<content>
+					    <IconTabBar id="bar0">
+					        <items>
+					            <IconTabFilter text="Arrival" id="filter0" icon="sap-icon://home">
+					                <content>
+					                    <List noDataText="No data" id="list0" items="{/Arrival}">
+					                        <items>
+                                                <StandardListItem title="{flightId}" id="item0" 
+                                                description="{time} {status} | No. of Passenger: {passengers}" 
+                                                icon="{logo}"/>
+                                            </items>
+					                    </List>
+					                </content>
+					            </IconTabFilter>
+					            <IconTabFilter text="Departure" icon="sap-icon://flight" iconColor="Critical" id="filter1"/></items>
+					    </IconTabBar>
+					</content>
 				</Page>
 			</pages>
 		</App>

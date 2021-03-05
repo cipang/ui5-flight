@@ -13,14 +13,10 @@
     "ach": "ach",
     "dataSources": {
       "mainService": {
-        "uri": "/V2/Northwind/Northwind.svc/",
-        "type": "OData",
-        "settings": {
-          "odataVersion": "2.0",
-          "localUri": "localService/metadata.xml"
-        }
+        "uri": "/model/flights.json",
+        "type": "JSON"
       }
-		}
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -90,8 +86,8 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": "RouteView1",
+          "name": "Home",
+          "pattern": "",
           "target": ["TargetView1"]
         }
       ],
@@ -100,7 +96,6 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View1",
           "viewName": "View1"
         }
       }
