@@ -12,7 +12,7 @@
 					                        <items>
                                                 <StandardListItem title="{flightId}" id="item0" 
                                                 description="{time} {status} | No. of Passenger: {passengers}" 
-                                                icon="{logo}"/>
+                                                icon="{logo}" press="handleListPress" type="Navigation" />
                                             </items>
 					                    </List>
 					                </content>

@@ -89,6 +89,11 @@
           "name": "Home",
           "pattern": "",
           "target": ["TargetView1"]
+        },
+        {
+          "name": "EditData",
+          "pattern": "edit/{type}/{index}",
+          "target": ["TargetEditData"]
         }
       ],
       "targets": {
@@ -97,6 +102,12 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewName": "View1"
+        },
+        "TargetEditData": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewName": "EditData"
         }
       }
     }

@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="flight.controller.EditData" displayBlock="true">
+	<Page id="detail" title="Edit Data" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <content></content>
+    </Page>
+</mvc:View>
