@@ -10,9 +10,7 @@
 					                <content>
 					                    <List noDataText="No data" id="list0" items="{/Arrival}">
 					                        <items>
-                                                <StandardListItem title="{flightId}" id="item0" 
-                                                description="{time} {status} | No. of Passenger: {passengers}" 
-                                                icon="{logo}" press="handleListPress" type="Navigation" />
+                                                <StandardListItem title="{flightId}" id="item0" description="{time} {status} | No. of Passenger: {passengers}" icon="{logo}" press="handleListPress" type="Navigation"/>
                                             </items>
 					                    </List>
 					                </content>
@@ -20,6 +18,9 @@
 					            <IconTabFilter text="Departure" icon="sap-icon://flight" iconColor="Critical" id="filter1"/></items>
 					    </IconTabBar>
 					</content>
+                    <headerContent>
+                        <Button xmlns="sap.m" text="Add" id="button0" press="handleAdd" />
+                    </headerContent>
 				</Page>
 			</pages>
 		</App>

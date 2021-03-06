@@ -1,10 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageBox"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller) {
+	function (Controller, MessageBox) {
 		"use strict";
 
 		return Controller.extend("flight.controller.View1", {
@@ -18,6 +19,18 @@ sap.ui.define([
                 var s = selected.split("/");
                 console.log(s)
                 oRouter.navTo("EditData", { type: s[1], index: s[2] });
+            },
+
+            handleAdd: function (evt) {
+                var flightId = window.prompt("Please enter flight ID");
+                if (flightId != null) {
+                    var oModel = this.getView().getModel();
+                    var oData = oModel.getData();
+                    var oNewData = { flightId: flightId, status: "New", passengers: 100 };
+                    oData["Arrival"].push(oNewData);
+                    debugger;
+                    oModel.refresh(true);
+                }
             }
 		});
 	});
