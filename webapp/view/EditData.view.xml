@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="flight.controller.EditData" displayBlock="true">
 	<Page id="detail" title="Edit Data" showNavButton="true" navButtonPress="handleNavButtonPress">
         <content>
-            <sap.ui.layout.form:Form editable="true" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="form0">
+            <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
                 <sap.ui.layout.form:formContainers>
                     <sap.ui.layout.form:FormContainer title="{flightId}" id="container0">
                         <sap.ui.layout.form:formElements>
@@ -9,6 +9,18 @@
                                 <sap.ui.layout.form:fields>
                                     <Input width="100%" id="input0" value="{passengers}"/>
                                 </sap.ui.layout.form:fields>
+                            </sap.ui.layout.form:FormElement>
+                            <sap.ui.layout.form:FormElement label="Status" id="element0_1615012128023">
+                            <sap.ui.layout.form:fields>
+                                <Select xmlns="sap.m" id="select0" selectedKey="{status}">
+                                    <items>
+                                        <core:Item xmlns:core="sap.ui.core" key="Delayed" text="Delayed" id="item0"/>
+                                        <core:Item xmlns:core="sap.ui.core" key="On time" text="On time" id="item1"/>
+                                        <sap.ui.core:Item text="Cancelled" xmlns:sap.ui.core="sap.ui.core" id="item2" key="Cancelled"/>
+                                        </items>
+                                    
+                                </Select>
+                            </sap.ui.layout.form:fields>
                             </sap.ui.layout.form:FormElement>
                         </sap.ui.layout.form:formElements>
                     </sap.ui.layout.form:FormContainer>
